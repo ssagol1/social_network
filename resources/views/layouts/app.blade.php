@@ -26,22 +26,22 @@
             <a class="nav-link" href="/users">Users</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/towns">Towns</a>
+            <a class="nav-link" href="{{ route('towns.index') }}">Towns</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/companies">Companies</a>
+            <a class="nav-link" href="{{ route('companies.index') }}">Companies</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/workplaces">Workplaces</a>
+            <a class="nav-link" href="{{ route('workplaces.index') }}">Workplaces</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/roles">Roles</a>
+            <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/jobapplication">Job Applications</a>
+            <a class="nav-link" href="{{ route('jobapplications.index') }}">Job Applications</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/message">Messages</a>
+            <a class="nav-link" href="{{ route('messages.index') }}">Messages</a>
         </li>
         <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

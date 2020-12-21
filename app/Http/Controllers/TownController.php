@@ -49,7 +49,7 @@ class TownController extends Controller
     {
         // Town::where('id', '=', '$id')->first();
         $towns = Town::findOrFail($id);
-        dd($towns);
+        return view('towns.show', compact('towns'));
     }
 
     /**

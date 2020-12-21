@@ -32,6 +32,13 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    /*
+        Definitanje svih one to many veza:
+    */
+    public function role() { return $this->belongsTo(Role::class); }
+
+    public function town() { return $this->belongsTo(Town::class); }
+
     /**
      * The attributes that should be cast to native types.
      *

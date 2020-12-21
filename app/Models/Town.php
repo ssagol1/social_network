@@ -13,4 +13,6 @@ class Town extends Model
         'name',
         'workplace_id'
     ];
+
+    public function users() { return $this->hasMany(Town::class); }
 }

@@ -31,3 +31,4 @@ Route::resource('messages', MessageController::class);
 Route::resource('roles', RoleController::class);
 Route::resource('towns', TownController::class);
 Route::resource('workplaces', WorkplaceController::class);
+Route::resource('users', UserController::class);
