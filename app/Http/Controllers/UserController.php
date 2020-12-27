@@ -38,7 +38,6 @@ class UserController extends Controller
     {
         $user = User::with(['role', 'town'])
             ->findOrFail($id);
-        $friends = $user->friendships()->paginate();
 
         return view('users.show', compact('user'));
     }
@@ -49,7 +48,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $roles = Role::pluck('name', 'id');
-        $countries = Country::pluck('name', 'id');
+        $towns = Town::pluck('name', 'id');
 
         return view('users.edit',
             compact('user', 'roles', 'towns')

@@ -8,6 +8,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TownController;
 use App\Http\Controllers\WorkplaceController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------

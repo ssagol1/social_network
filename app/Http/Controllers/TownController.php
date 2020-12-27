@@ -25,7 +25,7 @@ class TownController extends Controller
      */
     public function create()
     {
-        //
+        return view('towns.create');
     }
 
     /**
@@ -36,7 +36,12 @@ class TownController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /* validacija podataka: ime mora biti manje od 255 znakova, biti unique, itd. */
+        $validated = $request->validate([
+            'name' => 'required|unique:towns|max:255',
+        ]);
+        $town = Town::create($validated);
+        return view('towns.show', compact('town'));
     }
 
     /**
@@ -47,7 +52,6 @@ class TownController extends Controller
      */
     public function show($id)
     {
-        // Town::where('id', '=', '$id')->first();
         $towns = Town::findOrFail($id);
         return view('towns.show', compact('towns'));
     }
@@ -60,7 +64,8 @@ class TownController extends Controller
      */
     public function edit($id)
     {
-        //
+        $town = Town::findOrFail($id);
+        return view('towns.edit', compact('town'));
     }
 
     /**
@@ -72,7 +77,15 @@ class TownController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+        ]);
+
+        $town = Town::findOrFail($id);
+        $town->fill($validated);
+        $town->save();
+
+        return view('towns.show', compact('town'));
     }
 
     /**
@@ -83,6 +96,10 @@ class TownController extends Controller
      */
     public function destroy($id)
     {
-        //
+        /* primjer upita kojeg generira linija ispod: DELETE FROM countries WHERE id = 1 */
+        Town::destroy($id);
+
+        /* nakon brisanja, napravi redirect na index stranicu */
+        return redirect()->route('towns.index');
     }
 }
