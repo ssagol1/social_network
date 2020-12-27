@@ -9,6 +9,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TownController;
 use App\Http\Controllers\WorkplaceController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,10 @@ Route::resource('roles', RoleController::class);
 Route::resource('towns', TownController::class);
 Route::resource('workplaces', WorkplaceController::class);
 Route::resource('users', UserController::class);
+
+/* change password */
+Route::get('change_password/{user}', [ChangePasswordController::class, 'edit'])
+    ->name('change_password.edit');
+
+Route::post('change_password/{user}', [ChangePasswordController::class, 'update'])
+    ->name('change_password.update');
