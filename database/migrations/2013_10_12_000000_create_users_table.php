@@ -19,8 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->dateTime('last_online')->nullable();
-            $table->integer('age');
-            $table->boolean('sex');
+            $table->integer('age')->nullable();
+            $table->char('sex')->default('f');
 
             /* created_at, updated_at */
             $table->timestamps();

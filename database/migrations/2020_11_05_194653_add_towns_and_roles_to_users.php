@@ -14,8 +14,8 @@ class AddTownsAndRolesToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('town_id')->constrained();
-            $table->foreignId('role_id')->constrained();
+            $table->foreignId('town_id')->nullable()->constrained();
+            $table->foreignId('role_id')->nullable()->constrained();
         });
     }
 

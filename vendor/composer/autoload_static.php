@@ -126,6 +126,7 @@ class ComposerStaticInitfe2e83382b61f4f7b2426511507f619c
             'League\\Flysystem\\' => 17,
             'League\\CommonMark\\' => 18,
             'Laravel\\Tinker\\' => 15,
+            'Laravel\\Breeze\\' => 15,
         ),
         'I' => 
         array (
@@ -390,6 +391,10 @@ class ComposerStaticInitfe2e83382b61f4f7b2426511507f619c
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Laravel\\Breeze\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/breeze/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -510,6 +515,7 @@ class ComposerStaticInitfe2e83382b61f4f7b2426511507f619c
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\ChangePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/ChangePasswordController.php',
         'App\\Http\\Controllers\\CompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/CompanyController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\JobApplicationController' => __DIR__ . '/../..' . '/app/Http/Controllers/JobApplicationController.php',
@@ -2503,6 +2509,8 @@ class ComposerStaticInitfe2e83382b61f4f7b2426511507f619c
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
+        'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',

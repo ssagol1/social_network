@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\ChangePasswordController' => $baseDir . '/app/Http/Controllers/ChangePasswordController.php',
     'App\\Http\\Controllers\\CompanyController' => $baseDir . '/app/Http/Controllers/CompanyController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\JobApplicationController' => $baseDir . '/app/Http/Controllers/JobApplicationController.php',
@@ -2001,6 +2002,8 @@ return array(
     'Illuminate\\View\\ViewName' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewName.php',
     'Illuminate\\View\\ViewServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+    'Laravel\\Breeze\\BreezeServiceProvider' => $vendorDir . '/laravel/breeze/src/BreezeServiceProvider.php',
+    'Laravel\\Breeze\\Console\\InstallCommand' => $vendorDir . '/laravel/breeze/src/Console/InstallCommand.php',
     'Laravel\\Tinker\\ClassAliasAutoloader' => $vendorDir . '/laravel/tinker/src/ClassAliasAutoloader.php',
     'Laravel\\Tinker\\Console\\TinkerCommand' => $vendorDir . '/laravel/tinker/src/Console/TinkerCommand.php',
     'Laravel\\Tinker\\TinkerCaster' => $vendorDir . '/laravel/tinker/src/TinkerCaster.php',
