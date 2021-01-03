@@ -21,7 +21,8 @@ class CreateUsersTable extends Migration
             $table->dateTime('last_online')->nullable();
             $table->integer('age')->nullable();
             $table->char('sex')->default('f');
-            $table->integer('role_id');
+            
+            $table->foreignId('role_id')->constrained();
 
             /* created_at, updated_at */
             $table->timestamps();
